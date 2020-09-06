@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <style>
+        td{
+        padding: 6px;
+        width: 40%;
+        }
+        input[type=text], select,input[type=email],input[type=number] {
+                width: 100%;
+                margin: 1px 1px;
+                padding: 2px;
+                border: 0.1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                height: 25px;
+                }
+        i{
+            position: relative;
+            top:25px;
+            left:-27px;
+            font-size:20px;
+        }
+        input[type=submit] {
+            background-color: rgb(61, 146, 243);
+            color: white;
+            padding: 10px;
+            margin:auto;
+            border: none;
+            display: block;
+            
+            }
+        *{
+            font-family:'Acme', sans-serif;
+            font-size: 15px;
+        }  
+
+    </style>
+</head>
+<body>
+    <div style="background-color: lightgray;height:100%;width:60%;display: block;margin:auto">
+    <form  onsubmit="alert('Thank You');">
+        <table style="width: 50%;margin:auto;display: block;">
+            <tbody>
+                <tr>
+                    <td><label for="fname" > Full Name</label></td>
+                    <td><div><i  class="fas fa-user"></i><input required type="text" id="fname" class="text-box" placeholder="Full Name" pattern="[a-z]*" minlength="4"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="Addr1" > Address Line 1</label></td>
+                    <td><div><i  class="fas fa-address-card"></i><input required type="text" id="Addr1" class="text-box" placeholder="Address Line 1"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="Addr2" > Address Line 2 </label></td>
+                    <td><div><i  class="fas fa-address-card"></i><input required type="text" id="Addr2" class="text-box" placeholder="Address Line 2"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="City" > City</label></td>
+                    <td><div><i  class="fas fa-building"></i><input required type="text" id="City" class="text-box" placeholder="City"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="State" > State/Province/Region</label></td>
+                    <td><div><i  class="fas fa-home"></i><select required id="State">
+                        <option>-- Select --</option>
+                        <option value="TN">TamilNadu</option>
+                        <option value="KE">Kerala</option>
+                        <option value="KR">Karnataka</option>
+                        <option value="DL">Delhi</option>
+                        <option value="AN">Andhra</option>
+                    </select></div></td>
+                </tr>
+                <tr>
+                    <td><label for="Postal" >Postal Code/ZIP</label></td>
+                    <td><div><i  class="fas fa-mail-bulk"></i><input required type="text" id="Postal" class="text-box" placeholder="Enter 6 digits" pattern="\d{6}" maxlength="6"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="Country" >Country</label></td>
+                    <td><div><i  class="fas fa-flag"></i><select required id="Country">
+                        <option>-- Select --</option>
+                        <option value="IN">India</option>
+                        <option value="CH">China</option>
+                        <option value="FN">France</option>
+                        <option value="GM">Germany</option>
+                        <option value="AM">Amsterdam</option>
+                    </select></div></td>
+                </tr>
+                <tr>
+                    <td><label for="Email" >Email</label></td>
+                    <td><div><i  class="fas fa-envelope-square"></i><input required type="email" id="Email" class="text-box" placeholder="Email"></div></td>
+                </tr>
+                <tr>
+                    <td><label for="phn" >Phone Number</label></td>
+                    <td><div><i  class="fas fa-phone"></i><input required type="text" id="phn" class="text-box" placeholder="Enter 10 digits" pattern="\d{10}" maxlength=10></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input  type="submit" value="Submit" ></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    </div>
+ 
+</body>
+</html>
